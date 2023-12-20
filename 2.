@@ -1,0 +1,24 @@
+//write a program to copy one string to another without using fuction 
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+    string one;
+    cout<<"Enter first string : ";
+    cin>>one;
+    string two;
+    for(int i=0;one[i]!='\0';i++){
+        two[i] = one[i];
+    }
+    cout<<"Copied string : ";
+    for(int i=0;two[i]!='\0';i++){
+        cout<<two[i];
+    }
+
+    return 0;
+}
+
+//time - complexity ->O(n^2);
+//space - complexity -> O(n);
