@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int arr[10];
+    cout<<"Enter numbers : ";
+    for(int i=0;i<10;i++){
+        cin>>arr[i];
+    }
+    int sum = 0;
+    for(int i=0;i<10;i++){
+        sum = sum + arr[i];
+    }
+    cout<<"Sum : "<<sum<<endl;
+    double avg ;
+    for(int i=0;i<10;i++){
+        avg = sum/10;
+    }
+    cout<<"Average : "<<avg<<endl;
+    int max = 0 , ans = 0;
+    for(int i=0;i<10;i++){
+        if(arr[i]>max){
+            max = arr[i];
+        }
+    }
+    cout<<"Maximum element : "<<max<<endl;
+    int min  =arr[0] , ans2 = 0;
+    for(int i=0;i<10;i++){
+        if(arr[i]<min){
+            min = arr[i];
+        }
+    }
+    cout<<"Minimum  : "<<min;
+    
+    return 0;
+}
