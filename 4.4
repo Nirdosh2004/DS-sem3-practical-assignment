@@ -1,0 +1,39 @@
+/*4. Write a program to input 10 number to calculate the sum of all the numbers, to
+calculate the average of all nos. calculate max no. among them and minimum no.
+among them */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int array[10];
+    cout<<"Enter ten integer numbers : \n";
+    for(int i=0;i<10;i++){
+        cin>>array[i];
+    }
+    int sumOfAllNumbers=0;
+    for(int i=0;i<10;i++){
+        sumOfAllNumbers += array[i];
+    }
+    cout<<"Sum of all the numbers : "<<sumOfAllNumbers<<endl;
+    
+    double average = static_cast<double> (sumOfAllNumbers)/10;
+    cout<<"Avergage of all numbers : "<<average<<endl;
+    
+    int maximum = 0;
+    for(int i=0;i<10;i++){
+        if(array[i]>maximum){
+            maximum= array[i];
+        }
+    }
+    cout<<"Maximum element among them : "<<maximum<<endl;
+    
+    int minimum = array[0];
+    for(int i=0;i<10;i++){
+        if(array[i]<minimum){
+            minimum = array[i];
+        }
+    }
+    cout<<"Minimum element among them : "<<minimum;
+    return 0;
+}
