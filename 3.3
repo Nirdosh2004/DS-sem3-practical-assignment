@@ -1,0 +1,23 @@
+//3. Write a program to accept a string and convert all the characters of the string from lower case to upper case
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string input;
+    cout<<"Enter input string : ";
+    cin>>input;
+    int i=0;
+    while(input[i]!='\0'){
+        if(input[i] >= 'A' && input[i] <= 'Z'){
+            input[i] += 32;
+        }
+        else if(input[i] >= 'a' && input[i] <= 'z'){
+            input[i] -= 32;
+        }
+        i++;
+    }
+    cout<<"Answer is : "<<input;
+    
+    return 0;
+}
