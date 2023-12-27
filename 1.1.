@@ -1,0 +1,15 @@
+//1. Write a program to input a string and calculate the length of the string without using library function
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string varOne;
+    cout<<"Enter input : ";
+    cin>>varOne;
+    int count=0;
+    for(int i=0;varOne[i]!='\0';i++){
+        count++;
+    }
+    cout<<"Length of given string is : "<<count;
+}
