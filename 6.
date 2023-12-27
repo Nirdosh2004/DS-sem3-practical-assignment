@@ -1,0 +1,44 @@
+//6. Write a function that input 3*3 array and calculate the multiplication of both array
+
+#include<bits/stdc++.h>
+using namespace std;
+ inline void answer(int array1[3][3] , int array2[3][3] , int result[3][3]){
+    
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            result[i][j]= 0;
+            for(int k=0;k<3;k++){
+            result[i][j] += array1[i][k] * array2[k][j];
+            }
+        }
+    }
+}
+
+int main(){
+    
+    int array1[3][3] , array2[3][3] , result[3][3];
+    cout<<"Enter elements of array1 : \n";
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cin>>array1[i][j];
+        }
+    }
+    cout<<"Enter elements of array2 : \n";
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cin>>array2[i][j];
+        }
+    }
+    answer(array1,array2,result);
+    cout<<"resultand multiplication of both array is : \n";
+    
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cout<<result[i][j]<<"   ";
+        }
+        cout<<endl;
+    }
+    
+return 0;
+    
+}
