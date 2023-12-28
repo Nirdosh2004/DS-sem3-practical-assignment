@@ -1,0 +1,45 @@
+//15. Write a program to input how many numbers and then input the numbers and then search any number with the help of binary search
+
+#include<iostream>
+using namespace std;
+
+    inline int binarySearch(int array[] , int sizeofArray , int targetToFind){
+        int left = 0;
+        int right = sizeofArray - 1;
+        int mid = left + (right - left )/2;
+        
+        while(left <= right){
+            if(array[mid] == targetToFind){
+                return mid;
+            }
+            if(array[mid] > targetToFind){
+                right--;
+            }
+            else{
+                left++;
+            }
+            mid = left + (right - left)/2;
+        }
+        return -1;
+    }
+
+    int main(){
+        
+        int sizeofArray;
+        cout<<"Enter size of array : ";
+        cin>>sizeofArray;
+        
+        int array[sizeofArray];
+        cout<<"Enter elements of array : ";
+        for(int i=0;i<sizeofArray;i++){
+            cin>>array[i];
+        }
+        
+        int targetToFind;
+        cout<<"Enter target to find : ";
+        cin>>targetToFind ;
+        
+        cout<<"Element at index : " <<binarySearch(array , sizeofArray , targetToFind);
+        
+        return 0;
+    }
